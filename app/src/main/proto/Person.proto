@@ -1,0 +1,15 @@
+syntax = "proto2";
+
+package qudiodemo;
+
+option java_package = "com.colin.audiodemo";
+option java_outer_classname = "PersonPB";
+
+message Person {
+
+    required int32 type = 1;
+
+    required string content =2;
+
+}
+
