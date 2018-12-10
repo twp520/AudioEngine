@@ -13,6 +13,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.view.animation.LinearInterpolator
 
+/**
+ * create by colin on 2018/12/10
+ */
 class CountdownBar : View {
 
     private var mWidth = 0
