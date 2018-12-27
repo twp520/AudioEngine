@@ -70,7 +70,7 @@ class MyVoiceLineView : View {
 
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
-        canvas.save()
+//        canvas.save()
         canvas.translate(mWidth / 2f, mHeight / 2f)
         mA = defA
         drawLine(mPaint, mPath, canvas)
@@ -78,7 +78,7 @@ class MyVoiceLineView : View {
             mA = mAs[i]
             drawLine(mSecondPaint, mPath, canvas)
         }
-        canvas.restore()
+//        canvas.restore()
     }
 
     /**
@@ -93,9 +93,8 @@ class MyVoiceLineView : View {
         var x = -3f
         path.moveTo(mVx, getY(mVx) * 30)
         while (x <= 3f) {
-            val funcY = getY(x)
-            val vy = funcY * 30 //TODO 30 通过view的 高 来计算。公式还未找到
-            path.lineTo(mVx, vy)
+            //TODO 30 通过view的 高 来计算。公式还未找到
+            path.lineTo(mVx, getY(x) * 30)
             x += 0.5f
             mVx += mVxStep
         }
@@ -144,7 +143,10 @@ class MyVoiceLineView : View {
         //计算波峰
         defA = v / 50f
         mA = defA
-        mAs = arrayOf(mA * 0.75f, mA * .04f, mA * 0.25f, mA * 0.2f)
+        mAs[0] = mA * 0.75f
+        mAs[1] = mA * 0.55f
+        mAs[2] = mA * 0.25f
+        mAs[3] = mA * 0.25f
         postInvalidate()
     }
 
