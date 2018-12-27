@@ -88,7 +88,13 @@ class SoundBeatView : LinearLayout {
         params.leftMargin = mLeftMargin
         view.layoutParams = params
         view.pivotY = mLineHeight.toFloat()
-        val scaleY = ObjectAnimator.ofFloat(view, "scaleY", 1f, 0.2f, 0.8f, 0.5f, 1f)
+        val scaleY = ObjectAnimator.ofFloat(
+            view, "scaleY", 0f,
+            mRandom.nextFloat(),
+            mRandom.nextFloat(),
+            mRandom.nextFloat(),
+            mRandom.nextFloat(), 0f
+        )
         scaleY.startDelay = delays[mRandom.nextInt(4)]
         scaleY.repeatCount = -1
         mAnimSet.playTogether(scaleY)

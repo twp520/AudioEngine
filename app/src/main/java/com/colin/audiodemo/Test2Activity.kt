@@ -15,18 +15,18 @@ class Test2Activity : AppCompatActivity() {
 
     }
 
-    fun jianshao(view: View) {
+//    fun jianshao(view: View) {
 //        tcb.incrementProgressBy(-1)
 //        tcb.startCountDown(30000)
 //        Log.e("twp","count = ${test_lg.childCount}")
-        test_sbv.startAnim()
-    }
+//        test_sbv.startAnim()
+//    }
 
     fun start(view: View) {
-        test_sbv.startAnim()
+        test_mvlv.startAnim()
     }
 
     fun stop(view: View) {
-        test_sbv.stopAnim()
+        test_mvlv.stopAnim()
     }
 }
