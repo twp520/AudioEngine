@@ -26,6 +26,7 @@ class MyVoiceLineView : View {
     private var mAs = arrayOf(mA * 0.75f, mA * 0.55f, mA * 0.25f, mA * 0.2f)
     private val tag = "MyVoiceLineView"
     private lateinit var mHandler: Handler
+    private var mScaleY = 0f
 
 
     constructor(context: Context) : super(context) {
@@ -63,6 +64,7 @@ class MyVoiceLineView : View {
         super.onSizeChanged(w, h, oldw, oldh)
         mWidth = w
         mHeight = h
+        mScaleY = mHeight / 7f
         mPath.reset()
         mVx = -mWidth / 2f
         mVxStep = mWidth / 12f
@@ -91,10 +93,10 @@ class MyVoiceLineView : View {
         path.reset()
         mVx = -mWidth / 2f
         var x = -3f
-        path.moveTo(mVx, getY(mVx) * 30)
+        path.moveTo(mVx, getY(mVx) * mScaleY)
         while (x <= 3f) {
             //TODO 30 通过view的 高 来计算。公式还未找到
-            path.lineTo(mVx, getY(x) * 30)
+            path.lineTo(mVx, getY(x) * mScaleY)
             x += 0.5f
             mVx += mVxStep
         }
