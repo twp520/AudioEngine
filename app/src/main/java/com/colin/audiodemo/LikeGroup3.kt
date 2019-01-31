@@ -1,8 +1,6 @@
 package com.colin.audiodemo
 
 import android.content.Context
-import android.os.Handler
-import android.os.Looper
 import android.util.AttributeSet
 import android.widget.LinearLayout
 
@@ -14,17 +12,14 @@ class LikeGroup3 : LinearLayout {
     private var mWidth = 0
     private var mHeight = 0
     private var mItems = hashMapOf<String, LikeItem>()
-    private var mHandler: Handler
 
 
     constructor(context: Context) : super(context) {
         orientation = VERTICAL
-        mHandler = Handler(Looper.getMainLooper())
     }
 
     constructor(context: Context, attrs: AttributeSet?) : super(context, attrs) {
         orientation = VERTICAL
-        mHandler = Handler(Looper.getMainLooper())
     }
 
 
