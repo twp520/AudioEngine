@@ -8,12 +8,12 @@
         android:layout_height="match_parent"
         tools:context=".Test2Activity">
 
-    <com.colin.audiodemo.CountdownBar
-            android:id="@+id/tcb"
-            android:layout_width="100dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="10dp"
-            android:layout_height="wrap_content"/>
+    <!--  <com.colin.audiodemo.CountdownBar
+              android:id="@+id/tcb"
+              android:layout_width="100dp"
+              android:layout_marginStart="10dp"
+              android:layout_marginTop="10dp"
+              android:layout_height="wrap_content"/>-->
 
     <!--<Button-->
     <!--android:layout_width="wrap_content"-->
@@ -33,21 +33,39 @@
     <!--android:layout_width="200dp"-->
     <!--android:layout_height="50dp"/>-->
 
+    <!--
+        <com.colin.audiodemo.MyVoiceLineView
+                android:id="@+id/test_mvlv"
+                android:background="#000"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"/>
 
-    <com.colin.audiodemo.MyVoiceLineView
-            android:id="@+id/test_mvlv"
-            android:background="#000"
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="开始"
+                android:onClick="start"/>
+        <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="停止"
+                android:onClick="stop"/>-->
+
+    <com.colin.audiodemo.LikeGroup3
+            android:id="@+id/test_like3"
             android:layout_width="match_parent"
-            android:layout_height="30dp"/>
+            android:layout_height="200dp"/>
+
 
     <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="开始"
-            android:onClick="start"/>
+            android:id="@+id/test_btn1"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="用户A"/>
+
     <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="停止"
-            android:onClick="stop"/>
+            android:id="@+id/test_btn2"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="用户B"/>
 </LinearLayout>

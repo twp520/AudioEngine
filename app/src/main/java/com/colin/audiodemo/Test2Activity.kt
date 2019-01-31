@@ -12,6 +12,13 @@ class Test2Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_test2)
 
+        test_btn1.setOnClickListener {
+            test_like3.like("用户A")
+        }
+
+        test_btn2.setOnClickListener {
+            test_like3.like("用户B")
+        }
 
     }
 
@@ -21,12 +28,12 @@ class Test2Activity : AppCompatActivity() {
 //        Log.e("twp","count = ${test_lg.childCount}")
 //        test_sbv.startAnim()
 //    }
-
+/*
     fun start(view: View) {
         test_mvlv.startAnim()
     }
 
     fun stop(view: View) {
         test_mvlv.stopAnim()
-    }
+    }*/
 }
