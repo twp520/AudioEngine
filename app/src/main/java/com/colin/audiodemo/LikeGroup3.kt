@@ -35,6 +35,12 @@ class LikeGroup3 : LinearLayout {
     }
 
 
+    /**
+     * 当收到点赞消息时候，调用这个方法
+     * @param key 标志唯一性的key，可以用userID
+     *
+     * 也可以加其他UI需要的参数
+     */
     fun like(key: String) {
         if (mItems.contains(key)) { //包含这个key了，那么加数量
             mItems[key]?.addCount()
