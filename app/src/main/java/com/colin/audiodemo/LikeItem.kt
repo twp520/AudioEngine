@@ -43,6 +43,11 @@ class LikeItem : LinearLayout {
         mHandler = Handler(Looper.getMainLooper(), handlerCallback)
     }
 
+    /**
+     * 这里是初始化视图
+     *
+     * 可以随意修改
+     */
     private fun init(context: Context) {
         orientation = LinearLayout.HORIZONTAL
         setBackgroundColor(Color.BLUE)
@@ -75,14 +80,19 @@ class LikeItem : LinearLayout {
         this.endCall = call
     }
 
-    fun addCount() {
+    /**
+     * 默认3秒后消失
+     *
+     * 调用者可以自己传参数
+     */
+    fun addCount(delay: Long = 3000) {
         mHandler.removeCallbacksAndMessages(null)
         mCountTv.text = mCount++.toString()
-        mHandler.sendEmptyMessageDelayed(0x31, 3000)
+        mHandler.sendEmptyMessageDelayed(0x31, delay)
     }
 
     private fun startAnim() {
-        //先用上升动画代替
+        //上升动画
         val tranY = ObjectAnimator.ofFloat(this, "translationY", 0f, -100f)
         val alpha = ObjectAnimator.ofFloat(this, "alpha", 1f, 0f)
         val set = AnimatorSet()
